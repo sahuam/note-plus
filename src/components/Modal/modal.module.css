@@ -1,0 +1,50 @@
+.modalContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-start;
+  padding: 4rem;
+  justify-content: center;
+}
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: whitesmoke;
+  opacity: 0.8;
+  filter: blur(1rem);
+  animation: modalbackdroptransform 0.5s ease-out;
+}
+
+.modalBody {
+  background-color: white;
+  z-index: 5;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 5px 8px 8px 2px #0000002b;
+  animation: modalbodytransform 0.3s ease;
+}
+
+@keyframes modalbodytransform {
+  from {
+    transform: scale(0.2);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes modalbackdroptransform {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: whitesmoke;
+  }
+}
