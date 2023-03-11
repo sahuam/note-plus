@@ -1,0 +1,100 @@
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+
+const notes = [
+  {
+    id: "1",
+    title: "One",
+    description: "one decription",
+    color: "lightpink",
+    updatedDate: "[update]",
+    createdDate: "[create]",
+    user: "admin",
+  },
+  {
+    id: "4",
+    title: "Five",
+    description: "Five decription",
+    color: "lightblue",
+    updatedDate: "[update]",
+    createdDate: "[create]",
+    user: "admin",
+  },
+  {
+    id: "2",
+    title: "Two",
+    description: "Two decription",
+    color: "lightyellow",
+    updatedDate: "[update]",
+    createdDate: "[create]",
+    user: "admin",
+  },
+  {
+    id: "3",
+    title: "Three",
+    description: "Three decription",
+    color: "lightred",
+    updatedDate: "[update]",
+    createdDate: "[create]",
+    user: "admin",
+  },
+  {
+    id: "5",
+    title: "Four",
+    description: "Four decription",
+    color: "lightred",
+    updatedDate: "[update]",
+    createdDate: "[create]",
+    user: "admin",
+  },
+  {
+    id: "1",
+    title: "One",
+    description: "one decription",
+    color: "lightpink",
+    updatedDate: "[update]",
+    createdDate: "[create]",
+    user: "admin",
+  },
+  {
+    id: "4",
+    title: "Five",
+    description: "Five decription",
+    color: "lightblue",
+    updatedDate: "[update]",
+    createdDate: "[create]",
+    user: "admin",
+  },
+  {
+    id: "2",
+    title: "Two",
+    description: "Two decription",
+    color: "lightyellow",
+    updatedDate: "[update]",
+    createdDate: "[create]",
+    user: "admin",
+  },
+  {
+    id: "3",
+    title: "Three",
+    description: "Three decription",
+    color: "lightred",
+    updatedDate: "[update]",
+    createdDate: "[create]",
+    user: "admin",
+  },
+  {
+    id: "5",
+    title: "Four",
+    description: "Four decription",
+    color: "lightred",
+    updatedDate: "[update]",
+    createdDate: "[create]",
+    user: "admin",
+  },
+];
+
+export default function handler(req, res) {
+  res.status(200).json({
+    notes: notes.filter((note) => note.user === req.query.username),
+  });
+}
