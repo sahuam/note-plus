@@ -1,24 +1,25 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import axios from "axios";
 import NotesContainer from "@/components/Notes/NotesContainer";
 import Header from "@/components/header/Header";
+import { getNotesByUserName } from "@/api-integration/server-side/notes";
 
 export async function getServerSideProps(context) {
-  const { data } = await axios.get(
-    process.env.NEXT_PUBLIC_FETCH_NOTES_URL +
-      "?username=" +
+  try {
+    const { username = "", notes } = await getNotesByUserName(
       context.params.username
-  );
-  return {
-    props: {
-      username: context.params.username,
-      data: data,
-    },
-  };
+    );
+    return {
+      props: {
+        user: username,
+        notes,
+      },
+    };
+  } catch (error) {
+    return { props: { error: error.message } };
+  }
 }
 
-export default function NotesPage({ username, data = [], error }) {
+export default function NotesPage({ username, notes = [], error }) {
   const onload = async () => {};
   useEffect(() => {
     onload();
@@ -29,7 +30,7 @@ export default function NotesPage({ username, data = [], error }) {
       {/* header */}
       <Header />
       <div>
-        <NotesContainer notes={data[0].notes} username={username} />
+        <NotesContainer notes={notes} username={username} />
       </div>
     </div>
   );

@@ -20,6 +20,10 @@
   border-radius: 10px;
 }
 
+.form .errorMessage {
+  color: red;
+}
+
 .description {
   padding: 1rem 0 3rem;
 }

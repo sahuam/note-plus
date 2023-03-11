@@ -7,7 +7,7 @@
       "color": "lightpink",
       "updatedDate": "[update]",
       "createdDate": "[create]",
-      "user": "admin"
+      "uid": 1
     },
     {
       "id": "4",
@@ -16,7 +16,7 @@
       "color": "lightblue",
       "updatedDate": "[update]",
       "createdDate": "[create]",
-      "user": "admin"
+      "uid": 2
     },
     {
       "id": "2",
@@ -25,7 +25,7 @@
       "color": "lightyellow",
       "updatedDate": "[update]",
       "createdDate": "[create]",
-      "user": "admin"
+      "uid": 1
     },
     {
       "id": "3",
@@ -34,7 +34,7 @@
       "color": "lightred",
       "updatedDate": "[update]",
       "createdDate": "[create]",
-      "user": "admin"
+      "uid": 2
     },
     {
       "id": "5",
@@ -43,7 +43,7 @@
       "color": "lightred",
       "updatedDate": "[update]",
       "createdDate": "[create]",
-      "user": "admin"
+      "uid": 1
     },
     {
       "id": "1",
@@ -52,7 +52,7 @@
       "color": "lightpink",
       "updatedDate": "[update]",
       "createdDate": "[create]",
-      "user": "admin"
+      "uid": 2
     },
     {
       "id": "4",
@@ -61,7 +61,7 @@
       "color": "lightblue",
       "updatedDate": "[update]",
       "createdDate": "[create]",
-      "user": "admin"
+      "uid": 1
     },
     {
       "id": "2",
@@ -70,7 +70,7 @@
       "color": "lightyellow",
       "updatedDate": "[update]",
       "createdDate": "[create]",
-      "user": "admin"
+      "uid": 2
     },
     {
       "id": "3",
@@ -79,7 +79,7 @@
       "color": "lightred",
       "updatedDate": "[update]",
       "createdDate": "[create]",
-      "user": "admin"
+      "uid": 1
     },
     {
       "id": "5",
@@ -88,7 +88,30 @@
       "color": "lightred",
       "updatedDate": "[update]",
       "createdDate": "[create]",
-      "user": "admin"
+      "uid": 2
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Chiku Shetty",
+      "username": "chiku",
+      "email": "chiku@gmail.com",
+      "password": "chiku123"
+    },
+    {
+      "id": 2,
+      "name": "Amrit Sahu",
+      "username": "amrit",
+      "email": "amrit@gmail.com",
+      "password": "Amrit123"
+    },
+    {
+      "name": "Dimple Shetty",
+      "username": "dimple",
+      "email": "dimple@gmail.com",
+      "password": "dimple",
+      "id": 3
     }
   ]
 }

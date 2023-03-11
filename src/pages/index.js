@@ -6,14 +6,11 @@ import Header from "@/components/header/Header";
 import Button from "@/components/Buttons/Button";
 import SignInForm from "@/components/forms/SignIn";
 import RegisterForm from "@/components/forms/Register";
+import { Container } from "@mui/material";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const route = useRouter();
-  const loginBtnOnClick = () => {
-    route.push("/login");
-  };
   return (
     <Container>
       <Head>
@@ -35,6 +32,6 @@ export default function Home() {
           <RegisterForm />
         </div>
       </main>
-    </>
+    </Container>
   );
 }
