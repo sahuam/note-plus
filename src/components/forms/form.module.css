@@ -1,0 +1,45 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* background-color: chocolate; */
+  padding: 1rem;
+}
+.formReverse {
+  background-color: rgb(255, 220, 255);
+  border-radius: 10px;
+}
+
+.formTitle {
+  padding: 1rem;
+}
+.formTitle > br {
+  display: none;
+}
+.form {
+  /* background-color: aliceblue; */
+}
+
+.regform {
+}
+
+@media screen and (max-width: 600px) {
+  .formContainer {
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: chocolate; */
+  }
+  .form {
+    /* max-width: 80%; */
+    margin: "1rem";
+  }
+  .formReverse {
+    flex-direction: row-reverse;
+  }
+  .formTitle > br {
+    display: none;
+  }
+}

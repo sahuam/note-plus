@@ -1,27 +1,36 @@
-import Notes from "@/components/notes/Notes";
-import { Container, Typography } from "@mui/material";
+import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import axios from "axios";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+import NotesContainer from "@/components/Notes/NotesContainer";
+import Header from "@/components/header/Header";
 
 export async function getServerSideProps(context) {
   const { data } = await axios.get(
-    `http://localhost:3000/api/notes?username=${context.params.username}`
+    process.env.NEXT_PUBLIC_FETCH_NOTES_URL +
+      "?username=" +
+      context.params.username
   );
   return {
     props: {
-      notes: data.notes || [],
+      username: context.params.username,
+      data: data,
     },
   };
 }
 
-export default function NotePage({ notes }) {
+export default function NotesPage({ username, data = [], error }) {
+  const onload = async () => {};
   useEffect(() => {
-    console.log(notes);
-  }, [notes]);
+    onload();
+  }, []);
+
   return (
-    <Container>
-      <Notes notes={notes} />
-    </Container>
+    <div style={{ marginTop: 100 }}>
+      {/* header */}
+      <Header />
+      <div>
+        <NotesContainer notes={data[0].notes} username={username} />
+      </div>
+    </div>
   );
 }
